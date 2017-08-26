@@ -1,34 +1,36 @@
 import React from 'react'
 import ContactList from './ContactList'
 
-const contacts=[
+
+class App extends React.Component{
+	state={
+
+ contacts:[
     {
       id: 'ryan',
       name: 'Ryan Florence',
       email: 'ryan@reacttraining.com',
-      avatarURL: 'ryan.jpg'
+      avatarURL: 'http://localhost:5001/public/ryan.jpg'
     },
     {
       id: 'michael',
       name: 'Michael Jackson',
       email: 'michael@reacttraining.com',
-      avatarURL: 'michael.jpg'
+      avatarURL: 'http://localhost:5001/public/michael.jpg'
     },
     {
       id: 'tyler',
       name: 'Tyler McGinnis',
       email: 'tyler@reacttraining.com',
-      avatarURL: 'tyler.jpg'
+      avatarURL: 'http://localhost:5001/public/tyler.jpg'
     }
   ]
 
-
-class App extends React.Component{
+	}
   render(){
     return (
       <div>
-      <h1>Hello World!</h1>
-      <ContactList contacts={contacts}/>
+      <ContactList contacts={this.state.contacts}/>
       </div>
       )
   }
