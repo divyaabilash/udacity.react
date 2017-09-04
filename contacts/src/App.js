@@ -31,11 +31,14 @@ addContact=(contact)=>{
 	})
 }
 
-
+onNavigate=()=>{
+	this.setState({screen:'create'})
+}
   render(){
     return (
       <div>
-      {this.state.screen==='list'&&(<ContactList onDeleteContact={this.removeContact}  onAddContact={this.addContact} contacts={this.state.contacts}/>
+      {this.state.screen==='list' && (<ContactList onDeleteContact={this.removeContact}  onAddContact={this.addContact} contacts={this.state.contacts}
+      	onAdd={this.onNavigate}/>
      )}
        {this.state.screen==='create'&&(<CreateContact/>)}
       </div>

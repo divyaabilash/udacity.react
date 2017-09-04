@@ -49,6 +49,10 @@ class ContactList extends React.Component {
     	value={query}
     	onChange={(event) =>(this.updateQuery(event.target.value))}
     	/>
+    	<a 
+    	href='#create'
+    	onClick={()=>{this.props.onAdd()}}
+    	className='add-contact'>Addcontact</a>
     	</div>
     	{showContacts.length !== contacts.length &&(
     		<div>showing {showContacts.length} of {contacts.length}
